@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_instruction"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
+            android:id="@+id/helpText"
+            android:layout_marginStart="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/startPostcodeLabel"
+            android:text="@string/home_postcode"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/helpText"
+            android:layout_marginStart="20dp"
+            />
+
+        <EditText
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/startPostcodeLabel"
+            app:layout_constraintLeft_toLeftOf="@id/startPostcodeLabel"
+            android:text=""
+            android:id="@+id/startPostcodeText"
+            android:inputType="textPostalAddress"
+            android:autofillHints="@string/home_postcode" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/endPostcodeLabel"
+            android:text="@string/work_postcode"
+            app:layout_constraintLeft_toLeftOf="@id/endPostcodeText"
+            app:layout_constraintTop_toTopOf="@id/startPostcodeLabel"
+            />
+
+        <EditText
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text=""
+            app:layout_constraintTop_toBottomOf="@id/endPostcodeLabel"
+            android:layout_marginRight="20dp"
+            android:id="@+id/endPostcodeText"
+            android:layout_marginEnd="20dp"
+            android:inputType="textPostalAddress"
+            android:autofillHints="@string/work_postcode" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/arriveTimeLabel"
+            android:text="@string/arrival_time"
+            app:layout_constraintTop_toBottomOf="@id/startPostcodeText"
+            app:layout_constraintLeft_toLeftOf="@id/startPostcodeLabel"
+            />
+
+        <EditText
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/arriveTimeLabel"
+            app:layout_constraintLeft_toLeftOf="@id/startPostcodeLabel"
+            android:text=""
+            android:id="@+id/arriveTimeText1"
+            android:inputType="time"
+            android:autofillHints="@string/arrival_time" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/arriveTimeText1"
+            app:layout_constraintTop_toTopOf="@id/arriveTimeText1"
+            app:layout_constraintLeft_toRightOf="@id/arriveTimeText1"
+            android:text=":"
+            android:id="@+id/arriveTimeTextColon"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            />
+
+        <EditText
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/arriveTimeLabel"
+            app:layout_constraintLeft_toRightOf="@id/arriveTimeTextColon"
+            android:text=""
+            android:id="@+id/arriveTimeText2"
+            android:inputType="time"
+            android:autofillHints="@string/arrival_time" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/arriveTimeText1"
+                app:layout_constraintLeft_toLeftOf="@id/startPostcodeLabel"
+                android:text="@string/days_label"
+            android:id="@+id/daysLabel"
+                />
+
+        <CheckBox
+            android:id="@+id/mondayCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/monday"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/daysLabel"
+            app:layout_constraintLeft_toLeftOf="@id/startPostcodeLabel"
+            />
+
+
+        <CheckBox
+            android:id="@+id/tuesdayCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tuesday"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/mondayCheckbox"
+            app:layout_constraintLeft_toLeftOf="@id/startPostcodeLabel"
+            />
+
+        <CheckBox
+            android:id="@+id/wednesdayCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wednesday"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/tuesdayCheckbox"
+            app:layout_constraintLeft_toLeftOf="@id/startPostcodeLabel"
+            />
+
+        <CheckBox
+            android:id="@+id/thursdayCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/thursday"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/wednesdayCheckbox"
+            app:layout_constraintLeft_toLeftOf="@id/startPostcodeLabel"
+            />
+
+        <CheckBox
+            android:id="@+id/fridayCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/friday"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/thursdayCheckbox"
+            app:layout_constraintLeft_toLeftOf="@id/startPostcodeLabel"
+            />
+
+        <CheckBox
+            android:id="@+id/saturdayCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/saturday"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/fridayCheckbox"
+            app:layout_constraintLeft_toLeftOf="@id/startPostcodeLabel"
+            />
+
+        <CheckBox
+            android:id="@+id/sundayCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sunday"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/saturdayCheckbox"
+            app:layout_constraintLeft_toLeftOf="@id/startPostcodeLabel"
+            />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save_button"
+        android:id="@+id/saveButton"
+        android:onClick="saveCommute"
+        android:layout_marginTop="20dp"
+        android:textColor="#ffffff"
+        android:background="#F9AB55"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="visible"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

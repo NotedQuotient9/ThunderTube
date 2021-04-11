@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/statusPage"
+        android:visibility="visible"
+        >
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/parentLayout">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_refresh_black"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:id="@+id/contentRefresh"
+                android:onClick="contentRefresh"
+                android:contentDescription="@string/refresh_content_button"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:tint="@color/colorAccent"
+                android:layout_marginStart="10dp" />
+
+            <Space
+                android:id="@+id/spacer1"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/weatherIcon"
+                android:layout_width="91dp"
+                android:layout_height="93dp"
+                android:src="@drawable/ic_wb_sunny_orange"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/spacer1"
+                android:contentDescription="@string/weather_info_icon" />
+
+
+                <TextView
+                    app:layout_constraintTop_toBottomOf="@id/weatherIcon"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:id="@+id/weatherText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/weather_information"
+                    android:textSize="25sp"
+                    android:layout_marginTop="10dp" />
+
+
+                <TextView
+                    app:layout_constraintTop_toBottomOf="@id/weatherText"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:id="@+id/journeyText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/journey_text"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp" />
+
+
+            <Space
+                android:id="@+id/scrollBottomSpace"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/alternate_button"
+        android:id="@+id/alternateButton"
+        android:layout_marginTop="20dp"
+        android:textColor="#ffffff"
+        android:background="#F9AB55"
+        app:layout_constraintBottom_toTopOf="@id/disruptionButton"
+        android:visibility="visible"
+        />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/disruption_button"
+        android:id="@+id/disruptionButton"
+        android:textColor="#ffffff"
+        android:background="#909CC2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="visible"
+        />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/alternatePage"
+        android:visibility="gone">
+
+        <ScrollView
+            android:id="@+id/alternateScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/alternateConstraintView">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:id="@+id/alternateText"
+                    android:text="@string/alternate_text"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp" />
+
+                <Space
+                    android:id="@+id/alternateScrollBottomSpace"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/back_button"
+            android:id="@+id/statusButton2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:textColor="#ffffff"
+            android:background="#F9AB55"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/disruptionsPage"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/disruptionsConstraintLayout"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:id="@+id/tubeText"
+                    android:text="@string/current_disruptions"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_check_green"
+                    app:layout_constraintTop_toBottomOf="@id/tubeText"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:id="@+id/lineLogo"
+                    android:layout_marginTop="20dp"
+                    android:contentDescription="@string/good_service_icon" />
+
+                <TextView
+                    app:layout_constraintLeft_toRightOf="@id/lineLogo"
+                    app:layout_constraintTop_toTopOf="@id/lineLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/goodServiceText"
+                    android:text="@string/good_service_text"
+                    android:textSize="20sp"/>
+
+
+                <Space
+                    android:id="@+id/disruptionScrollBottomSpace"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </ScrollView>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/back_button"
+            android:id="@+id/statusButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:textColor="#ffffff"
+            android:background="#909CC2"
+            />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+<!--<ScrollView-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--app:layout_constraintTop_toTopOf="parent"-->
+<!--app:layout_constraintLeft_toLeftOf="parent">-->
+
+
+<!--<androidx.constraintlayout.widget.ConstraintLayout-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    tools:context=".MainActivity"-->
+<!--    android:id="@+id/parentLayout"-->
+<!--    >-->
+
+
+
+
+
+<!--    &lt;!&ndash;            android:background="@android:drawable/dialog_holo_light_frame"&ndash;&gt;-->
+
+<!--    &lt;!&ndash;    <Button&ndash;&gt;-->
+<!--    &lt;!&ndash;        app:layout_constraintTop_toBottomOf="@id/tubeText"&ndash;&gt;-->
+<!--    &lt;!&ndash;        app:layout_constraintLeft_toLeftOf="parent"&ndash;&gt;-->
+<!--    &lt;!&ndash;        app:layout_constraintRight_toLeftOf="@id/journeyText"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:id="@+id/button"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:layout_width="wrap_content"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:text="Go"&ndash;&gt;-->
+<!--    &lt;!&ndash;        tools:layout_editor_absoluteX="139dp"&ndash;&gt;-->
+<!--    &lt;!&ndash;        tools:layout_editor_absoluteY="440dp" />&ndash;&gt;-->
+
+<!--    <TextView-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        android:id="@+id/tubeText"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        tools:layout_editor_absoluteX="154dp"-->
+<!--        tools:layout_editor_absoluteY="286dp" />-->
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+
+
+<!--</ScrollView>-->

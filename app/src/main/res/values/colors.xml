@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#084887</color>
+    <color name="colorPrimaryDark">#084887</color>
+    <color name="colorAccent">#909CC2</color>
+    <color name="tubePink">#CC9999</color>
+    <color name="tubeBrown">#8F4F04</color>
+    <color name="tubeRed">#E32017</color>
+    <color name="tubeYellow">#FFD300</color>
+    <color name="tubeGreen">#00782A</color>
+    <color name="tubeCyan">#00A4A7</color>
+    <color name="tubeGrey">#A0A5A9</color>
+    <color name="tubeMagenta">#9B0056</color>
+    <color name="tubeOrange">#EE7C0E</color>
+    <color name="tubeBlue">#003688</color>
+    <color name="tubeLightGreen">#84B817</color>
+    <color name="tubeLightBlue">#0098D4</color>
+    <color name="tubeLightCyan">#95CDBA</color>
+
+</resources>

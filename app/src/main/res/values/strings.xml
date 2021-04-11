@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">WeatherApiTest</string>
+    <string name="app_description">The last app you\'ll ever need for
+        commuting in London.
+        ThunderTube allows you to enter where
+        you work and when you work, and then it
+        tells you every morning the information
+        you need to get to work on time, including
+        weather and travel disruptions. </string>
+    <string name="api_info">Powered by OpenWeatherApi and TFLUnifiedApi</string>
+    <string name="refresh_content_button">refresh content button</string>
+    <string name="weather_info_icon">weather info icon</string>
+    <string name="weather_information">Weather information</string>
+    <string name="journey_text">Loading Data,
+        if this takes a while then you may need to change your settings</string>
+    <string name="alternate_button">View Alternate Routes</string>
+    <string name="disruption_button">View all Tube Disruptions</string>
+    <string name="alternate_text">Suggested alternate routes:</string>
+    <string name="back_button">Go Back</string>
+    <string name="current_disruptions">Current Disruptions:</string>
+    <string name="good_service_icon">good service icon</string>
+    <string name="good_service_text">Good Service on all other lines</string>
+    <string name="settings_instruction">Please enter your commute details:</string>
+    <string name="home_postcode">Home Postcode</string>
+    <string name="work_postcode">Work Postcode</string>
+    <string name="arrival_time">Arrival Time</string>
+    <string name="days_label">Days that you work</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+    <string name="save_button">Save Information</string>
+    <string name="current_status">Current Status</string>
+    <string name="settings_button">settings button</string>
+    <string name="settings">Settings</string>
+    <string name="setupText">Initial Set-up</string>
+</resources>
